@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/html/naver.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<!-- TODO: 또 무엇이 필요할까요? -->
+	<style>
+		header{
+			text-align: center;
+		}
+        a{
+			text-decoration-line:none;
+			color: black;
+		}
+		footer{
+			text-align: center;
+		}
+		.main{
+			text-align: center;
+		}
+    </style></head>
+    
+	<body>
+		<header>
+			<!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
+			<a href="https://www.naver.com/">NAVER</a>
+			<br>
+			<input placeholder="검색어를 입력해주세요.">
+			<br>
+			<br>	
+			<a>뉴스판</a> 
+			&nbsp;&nbsp;&nbsp;
+			<a>경제지표판</a>
+			&nbsp;&nbsp;&nbsp;
+			<a>연예판</a>
+			&nbsp;&nbsp;&nbsp;
+			<a>트렌드판</a>
+			<br>
+			<a>트렌드판</a>
+			&nbsp;&nbsp;&nbsp;
+			<a>트렌드판</a>
+			&nbsp;&nbsp;&nbsp;
+			<a>트렌드판</a>
+
+		</header>
+
+		<section class="main">
+			<!-- TODO: main은 어떤 식으로 나눌 수 있을까요? -->
+			<p>10도 맑음</p>
+			<p>날씨 서울시 잠실동</p>
+			<p>코로나19</p>
+			<p>코로나19 &nbsp;&nbsp;&nbsp; 코로나19 팩트체크</p>
+			<p>102주년 대한민국 임시정부 수립일</p>
+			<p>앱으로 새로운 네이버를 더 쾌적하게 사용해 보세요.</p>
+			<p>웹툰</p>
+			<p>인기 주제 판을 확인해 보세요!
+				<br>
+				<a>영화판</a>&nbsp;&nbsp;&nbsp;<a>뿜판</a>
+				<a>웹툰판</a>&nbsp;&nbsp;&nbsp;<a>경제M판</a>
+			</p>
+			<p>네이버앱 업데이트 사전 안내</p>
+
+		</section>
+
+		<footer>
+            <!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
+            <a href="https://www.naver.com/">로그인</a>
+            <a href="https://www.naver.com/">전체서비스</a>
+            <a href="https://www.naver.com/">PC버전</a>
+            <br>
+            <a href="https://www.naver.com/">이용약관</a>
+            <a href="https://www.naver.com/"><strong> 개인정보처리방침</strong></a>
+            <a href="https://www.naver.com/">고객센터</a>
+		</footer>
+	<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

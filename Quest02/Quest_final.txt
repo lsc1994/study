@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://127.0.0.1:5500/html/naver.html -->
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+		
+		<!-- TODO: 또 무엇이 필요할까요? -->
+	<style>
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: #eaeef3;
+        }
+        #icon{
+            text-align: right;
+        }
+		header{
+			text-align: center;
+		}
+        .news{
+            display: grid;
+            width: 35%;
+            margin: 0 auto;
+        }
+        ul li{
+            list-style: none;
+            margin: 30px;
+            border: 1px;
+            background: gray;
+            padding: 10px;
+            border-radius: 15%;
+            display: inline-block;
+        }
+
+        #s1{
+            padding-left: 10px;
+            margin: 0 auto;
+            width: 30%;
+            background-color: white;
+              display:grid;
+             grid-template-columns: 0.2fr 2fr 0.6fr 0.2fr;
+             font-size:small;
+        }
+        .interval1{
+            margin-top: 15px;
+        }
+        #s2{
+            padding-left: 10px;
+            margin: 0 auto;
+            width: 30%;
+            background-color: white;
+             font-size:small;
+        }
+        button{
+            background-color: #eaeef3;
+            padding: 5px;
+        }
+        .fas fa-chevron-up{
+            text-align: right;
+        }
+        .img1{
+            width: 400px;
+        }
+        #s3{
+            padding-left: 10px;
+            background-color: white;
+            width: 30%;
+            margin: 0 auto;
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: small;
+        }
+        .interval2{
+            margin-top: 15px;
+        }
+        #s4{
+            padding-left: 10px;
+            text-align: center;
+            background-color: white;
+            width: 30%;
+            margin: 0 auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        #s5{
+            padding-left: 15px;
+            background-color: white;
+            width: 30%;
+            margin: 0 auto;
+            display: grid;
+              grid-template-columns: 1fr 6.5fr 1.5fr;
+              padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .n{
+            padding-left: 3px;
+            width: 60%;
+        }
+        .use{
+            background-color: white;
+            border-color: blue;
+            color: blue;
+            border-radius: 5%;
+        }
+        #s6{
+            padding-left: 15px;
+            background-color: white;
+            width: 30%;
+            margin: 0 auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+           display:  grid;
+             grid-template-columns: 6fr 1fr;
+        }
+        .cartoon_go{
+            text-align: right;
+            padding-right: 30px;
+        }
+        #s7{
+            padding-left: 10px;
+            background-color: white;
+            width: 30%;
+            margin: 0 auto;
+        }
+        #pan a{
+           text-align: right;
+           font-size: small;
+           background-color: #eaeef3;
+        }
+
+        #pan div{
+          width: 14rem;
+          height: 2rem;
+          padding:0;
+          margin:0;
+          display: grid;
+         grid-template-columns: 0.5fr 2fr 0.5fr;
+        }
+
+        #pan{
+           text-align: left;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+         font-size: xx-small;
+        }
+        #s8{
+            padding-left: 10px;
+            background-color: white;
+            width: 30%;
+            margin: 0 auto;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .notice{
+            border: 1px solid green;
+            background-color: white;
+            border-color: green;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 12px;
+            color: green;
+            padding: 2px;
+        }
+        .update{
+            margin-left: 10px;
+        }
+        #s8 a{
+            display: grid;
+             grid-template-columns: 1fr 5fr 1fr;
+            padding-left: 5px;
+        }
+        #s8 i{
+            text-align: right;
+            padding-right: 30px;
+        }
+        #naver{
+            font-size: 60px;
+            color: green;
+            font-weight: 900;
+        }
+        footer{
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .foot_naver{
+            font-weight: 900;
+        }
+    </style>
+    </head>
+    
+	<body>
+		<header>
+			<!-- TODO: 어디까지를 header로 보는 것이 좋을까요? -->
+            <div id="icon">
+            <a>QR체크인</a>
+            <button class="btn1">Npay</button>
+            <button class="btn2">n</button>
+             </div>
+            <br>
+			<a href="https://www.naver.com/" id="naver">NAVER</a>
+			<br>
+            <input type="text" name="" size="40" placeholder="검색어를 입력해주세요." 
+            style="border: 1px solid green; width: 350pt; height: 35px;">
+
+            <div class="news">
+                <ul class="shs_list">
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/up/service/menu/20210614/news_icon_88x88_dark.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2021/0426/upload_16194098442401MHsE.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">뉴스판</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/up/service/menu/20210614/shopping_icon_88x88_dark.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2021/0426/upload_16194099359615PPET.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">쇼핑판</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/up/service/menu/20210614/data_icon_88x88_dark.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2021/0426/upload_16194098613516y6da.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">경제지표판</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/up/service/menu/20210614/sports_icon_88x88_dark.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2021/0426/upload_161940990062833vIT.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">스포츠판</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/edit/2020/0319/mobile_19411917574.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2020/0319/mobile_19411917574.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">메일</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/edit/2020/0319/mobile_191015178706.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2020/0319/mobile_191015178706.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">카페</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source media="false" class="ICON_DARK" srcset="https://s.pstatic.net/static/www/mobile/edit/2020/0319/mobile_181505455420.png">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2020/0319/mobile_181505455420.png">
+                                </picture>
+                            </div>
+                            <span class="shs_text TITLE">블로그</span>
+                    </li>
+                    <li class="shs_item">
+                            <div class="shs_service_mw">
+                                <picture>
+                                    <source srcset="https://s.pstatic.net/static/www/mobile/edit/2021/0427/upload_1619497871869hiEPw.png" media="false">
+                                    <img width="44" height="44" alt="" class="shs_service_m ICON" onerror="this.parentNode.outerHTML='<span class=\'comp_noimage\'><span class=\'blind\'>이미지 준비중</span></span>';" src="https://s.pstatic.net/static/www/mobile/edit/2021/0427/upload_1619497854375Q53rw.png">
+                                </picture>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+		</header>
+		<section class="main">
+            <div>
+                <article id="s1">
+                    <i class="fas fa-moon"></i>
+                    <section>
+                        <p id="w_icon"><b>10˚맑음</b></p>
+                        <p id="w_announce">어제보다 2˚ 높아요</p>
+                    </section>
+                    <section id="now">
+                        <p id="letter"><b>NOW.</b></p>
+                        <p>지금 방송중</p>
+                    </section>
+                    <i class="fas fa-circle"></i>
+                </article>
+            </div>
+            <div class="interval1">
+                <article id="s2">
+                    <section id="location_w">
+                        <span><b>날씨</b></span>
+                        <span id="location">서울시 잠실동</span>
+                        <i class="fas fa-crosshairs"></i>
+                        <i class="fas fa-chevron-up"></i>
+                    </section>
+                    <br>
+                        <button>시간대별 날씨</button>
+                        <button>시간대별 미세먼지</button>
+                        <button>주간 날씨</button>
+                        <button>주간 미세먼지</button>
+                    <br>
+                    <img src='img1.PNG' class="img1">
+                </article>
+            </div>
+            <br>
+            <div>
+                <article id="s3">
+                        <div>
+                            <i class="fas fa-virus-slash"></i>
+                            <span><strong>코로나19</strong></span>
+                            <br>
+                            <p>국내외 확진 현황</p>
+                        </div>
+                        <div>
+                            <i class="far fa-check-circle"></i>
+                            <span><strong>코로나19 팩트체크</strong></span>
+                            <br>
+                            <p>백신 정보 팩트는?</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            <div class="interval2">
+                 <article id="s4">
+                      <i class="fas fa-dungeon"></i>
+                    <span>제102주년 <strong>대한민국 임시정부 수립일</strong></span>
+                </article>
+            </div>
+            <br>
+            <div>
+                 <article id="s5">
+                      <span><img src="n.PNG" class="n"></span>
+                      <span>앱으로 <strong>새로운 네이버</strong>를 더 쾌적하게 사용해 보세요.</span>
+                      <button class="use"> 앱 사용하기</button>
+                  </article>
+            </div>
+            <br>
+            <div>
+                <article id="s6">
+                    <span><strong>웹툰</strong></span>
+                   <a class="cartoon_go"><i class="fas fa-chevron-down"></i></a>
+                </article>
+            </div>
+            <br>
+		
+        <div>
+            <article id="s7">
+                <section id="pan_title">
+                    <b>인기 주제 판을 확인해 보세요!</b>
+                    <a class="">판관리</a>
+                </section>
+                <br>
+                <section id="pan">
+                    <a href="#">
+                        <div class="movie"><i class="fas fa-film"></i>
+                            영화판
+                            <span><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div><i class="fas fa-comment"></i>
+                            뿜판
+                            <span><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div><i class="fas fa-book-open"></i>
+                            웹툰판
+                            <span><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div><i class="fas fa-chart-line"></i>
+                            경제M판
+                            <span><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </a>
+                </section>
+                </article>
+                </div>
+                <br>
+                <div>
+                    <article id="s8">
+                        <a href="#">
+                            <span class="notice">알립니다</span>
+                            <span class="update"><strong>네이버앱 업데이트 사전 안내</strong></span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+            </article>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+
+		<footer>
+            <!-- TODO: 하단의 여러 가지 링크들은 어떻게 처리하면 좋을까요? -->
+            <a href="https://www.naver.com/">로그인</a>
+             | 
+            <a href="https://www.naver.com/">전체서비스</a> | 
+            <a href="https://www.naver.com/">PC버전</a>
+            <br>
+            <a href="https://www.naver.com/">이용약관</a> | 
+            <a href="https://www.naver.com/"><strong> 개인정보처리방침</strong></a> | 
+            <a href="https://www.naver.com/">고객센터</a>
+            <br>
+            <br>
+            <a class="foot_naver">NAVER</a>
+		</footer>

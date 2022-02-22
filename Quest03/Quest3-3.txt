@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>구구단 게임</title>
+
+    <style>
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>구구단 게임</h1>
+
+    <li style="margin-bottom:5px;">랜덤값으로 지정할 수 있는 최대 자릿수는 3입니다.</li>
+    <li style="margin-bottom:5px;">자릿수를 등록하면 해당 자릿수 크기의 숫자 2개가 랜덤으로 표시 됩니다.</li>
+    <li style="margin-bottom:5px;">랜덤으로 표시되는 2개 숫자의 곱셈값을 기록하세요.</li>
+    <div class="setDigitForm">
+      <label for="setDigitNum">자릿수를 설정해주세요: </label>
+      <input type="text" id="setDigitNum" class="setDigitNum">
+      <input type="submit" value="등록" class="setDigitSubmit">
+    </div>
+	
+    <div class="form" style="margin-top:40px;">
+      <sapn id="randA">랜덤값A</sapn> X <sapn id="randB">랜덤값B</sapn> =  <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="정답확인" class="guessSubmit">
+    </div>
+
+    <div class="resultArea" style="margin-top:40px;">
+      <span>정답여부는 여기에!!</span>
+    </div>
+
+    <script>
+      /** TODO: 여기에 게임이 작동될 수 있도록 스크립트를 짜보세요  */
+      let setDigitForm = document.getElementById("setDigitNum");
+      let setDigitSubmit = document.querySelector(".setDigitSubmit");
+      let randA = document.querySelector("#randA");
+      let randB = document.querySelector("#randB");
+      let guessField = document.getElementById("guessField");
+      let guessSubmit = document.querySelector(".guessSubmit");
+      let resultArea = document.querySelector(".resultArea");
+
+      let num1 = '';
+      let num2 = '';
+      let an = '';
+      let max = '';
+      let min = '';
+
+      //등록 버튼 클릭 
+      setDigitSubmit.addEventListener("click",function(e){
+        e.preventDefault();
+
+         // 4이상의 숫자 클릭 시 alert로 알림
+        if(Number(setDigitForm.value) === 1){
+          min = 1;
+          max = 9;
+          num1 =  Math.floor(Math.random()*8)+2;
+          num2 =  Math.floor(Math.random()*9)+1;
+          randA.textContent = num1;
+          randB.textContent = num2;
+        }else if(Number(setDigitForm.value) === 2){
+          min = 10;
+          max = 99;
+          num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
+          num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
+          randA.textContent = num1;
+          randB.textContent = num2;
+        }else if(Number(setDigitForm.value) === 3){
+          min = 100;
+          max = 999;
+          num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
+          num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
+          randA.textContent = num1;
+          randB.textContent = num2;
+         }else{
+          alert("3 이하 숫자를 입력해주세요");
+          setDigitForm.value = '';
+          setDigitForm.focus();
+         }
+      });
+
+      //정답확인 클릭
+      guessSubmit.addEventListener('click', function(f){
+        f.preventDefault();
+        an = num1 * num2;
+
+        // 정답
+        if(an == Number(guessField.value)){
+          console.log(setDigitForm.value);          
+          resultArea.textContent = "정답";
+          if(Number(setDigitForm.value) === 1){
+              num1 =  Math.floor(Math.random()*8)+2;
+              num2 =  Math.floor(Math.random()*9)+1;
+              randA.textContent = num1;
+              randB.textContent = num2;
+           }else if(Number(setDigitForm.value) === 2){
+                min = 10;
+                max = 99;
+                num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
+                num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
+                randA.textContent = num1;
+                randB.textContent = num2;
+           }else if(Number(setDigitForm.value) === 3){
+                min = 100;
+                max = 999;
+                num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
+                num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
+                randA.textContent = num1;
+                randB.textContent = num2;
+           }
+
+          //정답 일시 값 초기화 및 포커스
+          guessField.value = '';
+          guessField.focus();
+
+        }else{
+          //오답 
+          resultArea.textContent = "오답";
+          guessField.value = '';
+          guessField.focus();
+        }
+
+      });
+      
+    </script>
+  </body>
+</html>

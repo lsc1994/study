@@ -3,8 +3,8 @@ class Desktop {
 	constructor(move){
 		this.move = move;
 	}
-	move(){
-
+	show(){
+		let folder = document.getElementById("move_folder");
 	}
 };
 
@@ -14,7 +14,6 @@ class Icon {
 		this.icon = icon;
 	}
 	icon(){
-		return document.write("<div>asdf</div>");
 	}
 };
 

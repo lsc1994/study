@@ -7,12 +7,25 @@
 	</head>
 	<body>
 		<section class="desktop">
+			<div id="move_folder">
+				<img src="./folder.jpg" alt="폴더">
+			</div>
+
+			<div id="move_trash">
+				<img src="./trash.jpg" alt="쓰레기통">
+			</div>
 		</section>
 
 		<script>
+			const num = prompt("출력할 갯수는 ? ");
+			let folder = document.getElementById("move_folder");
+			let trash = document.getElementById("move_trash");
+
 			let myDesktop = new Desktop(
 				/* TODO: myDesktop 인스턴스의 생성자의 변수로 무엇이 들어가야 할까요? */
-			);
+				"fuck"
+				);
+				myDesktop.icon();
 		</script>
 	</body>
 </html>

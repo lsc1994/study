@@ -39,13 +39,13 @@
 
     <script>
       /** TODO: 여기에 게임이 작동될 수 있도록 스크립트를 짜보세요  */
-      let setDigitForm = document.getElementById("setDigitNum");
-      let setDigitSubmit = document.querySelector(".setDigitSubmit");
-      let randA = document.querySelector("#randA");
-      let randB = document.querySelector("#randB");
-      let guessField = document.getElementById("guessField");
-      let guessSubmit = document.querySelector(".guessSubmit");
-      let resultArea = document.querySelector(".resultArea");
+      const setDigitForm = document.getElementById("setDigitNum");
+      const setDigitSubmit = document.querySelector(".setDigitSubmit");
+      const randA = document.querySelector("#randA");
+      const randB = document.querySelector("#randB");
+      const guessField = document.getElementById("guessField");
+      const guessSubmit = document.querySelector(".guessSubmit");
+      const resultArea = document.querySelector(".resultArea");
 
       let num1 = '';
       let num2 = '';
@@ -57,34 +57,39 @@
       setDigitSubmit.addEventListener("click",function(e){
         e.preventDefault();
 
-         // 4이상의 숫자 클릭 시 alert로 알림
-        if(Number(setDigitForm.value) === 1){
+        //switch case 문을 사용함
+        switch(Number(setDigitForm.value)){
+          case 1:
           min = 1;
           max = 9;
           num1 =  Math.floor(Math.random()*8)+2;
           num2 =  Math.floor(Math.random()*9)+1;
           randA.textContent = num1;
           randB.textContent = num2;
-        }else if(Number(setDigitForm.value) === 2){
+          break;
+          case 2:
           min = 10;
           max = 99;
           num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
           num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
           randA.textContent = num1;
           randB.textContent = num2;
-        }else if(Number(setDigitForm.value) === 3){
+          break;
+          case 3:
           min = 100;
           max = 999;
           num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
           num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
           randA.textContent = num1;
           randB.textContent = num2;
-         }else{
+          break;
+          default:
           alert("3 이하 숫자를 입력해주세요");
           setDigitForm.value = '';
-          setDigitForm.focus();
-         }
-      });
+          setDigitForm.focus();\
+          break;
+
+        }
 
       //정답확인 클릭
       guessSubmit.addEventListener('click', function(f){
@@ -95,27 +100,6 @@
         if(an == Number(guessField.value)){
           console.log(setDigitForm.value);          
           resultArea.textContent = "정답";
-          if(Number(setDigitForm.value) === 1){
-              num1 =  Math.floor(Math.random()*8)+2;
-              num2 =  Math.floor(Math.random()*9)+1;
-              randA.textContent = num1;
-              randB.textContent = num2;
-           }else if(Number(setDigitForm.value) === 2){
-                min = 10;
-                max = 99;
-                num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
-                num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
-                randA.textContent = num1;
-                randB.textContent = num2;
-           }else if(Number(setDigitForm.value) === 3){
-                min = 100;
-                max = 999;
-                num1 =  Math.floor(Math.random()*(max - min + 1)) + min;
-                num2 =  Math.floor(Math.random()*(max - min + 1)) + min;
-                randA.textContent = num1;
-                randB.textContent = num2;
-           }
-
           //정답 일시 값 초기화 및 포커스
           guessField.value = '';
           guessField.focus();

@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="./desktop.css">
-		<script src="./desktop.js"></script>
-	</head>
-	<body>
-		<section class="desktop">
-			<div id="move_folder">
-				<img src="./folder.jpg" alt="폴더">
-			</div>
-
-			<div id="move_trash">
-				<img src="./trash.jpg" alt="쓰레기통">
-			</div>
-		</section>
-
-		<script>
-			let folder = document.getElementById("move_folder");
-			let trash = document.getElementById("move_trash");
-
-			let myDesktop = new Desktop(
-				/* TODO: myDesktop 인스턴스의 생성자의 변수로 무엇이 들어가야 할까요? */
-				);
-				myDesktop.show();
-		</script>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./desktop.css">
+    <script src="./desktop.js"></script>
+</head>
+<body>
+    <div>
+       <button onclick="news()">새 바탕화면</button>
+    </div>
+    <section class="desktop">
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        let icon = new Icon(i_num,'아이콘');
+        icon.sth();
+        let folder = new Folder(f_num,'폴더');
+        folder.sth();
+        folder.dbc();
+        folder.closeF();
+        let desktop = new Desktop();    
+        desktop.mouse();
+    </script>
+</body>
 </html>

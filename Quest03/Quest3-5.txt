@@ -32,75 +32,87 @@
     </div>
 
     <div class="resultArea" style="margin-top:40px;">
-      <img id="img" src="./images/rsp.PNG"/>
-      <br>
       <span>승패여부는 여기에!!</span>
     </div>
 
     <script>
       /** TODO: 여기에 게임이 작동될 수 있도록 스크립트를 짜보세요  */
-      let setPrsSubmit = document.querySelector('.setPrsSubmit');
-      let blind = document.querySelector('.blind');
+      const setPrsSubmit = document.querySelector('.setPrsSubmit');
+      const blind = document.querySelector('.blind');
       let btnScissors = document.querySelector('.btnScissors');
       let btnRock = document.querySelector('.btnRock');
       let btnPaper = document.querySelector('.btnPaper');
-      let resultArea = document.querySelector('.resultArea');
-      let img = document.getElementById('img');
+      const resultArea = document.querySelector('.resultArea');
       let comSelect;
 
       //게임 시작 클릭시 1 : 가위, 2 : 바위, 3 : 보 로 지정하여 1~3 난수 설정
       
       setPrsSubmit.addEventListener('click', function(){
         comSelect = Math.floor(Math.random(1)*3)+1;
-        if(comSelect === 1){
-         comSelect = "가위";
-        }else if(comSelect === 2){
+        switch(comSelect){
+        case 1:
+          comSelect = "가위";
+          break;
+        case 2:  
           comSelect = "바위";
-        }else if(comSelect === 3){
+          break;
+        case 3:
           comSelect = "보";
+          break;
+        default:
+          break;
         }
         console.log(comSelect);
       });
       
       //가위 클릭시
       btnScissors.addEventListener('click', function(){
-        btnScissors = 1;
-        if(btnScissors === 1){
-          if(comSelect === "가위"){
+        switch(comSelect){
+          case "가위":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 비겼습니다."
-          }else if(comSelect === "바위"){
+          break;
+          case "바위":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 졌습니다."
-          }else if(comSelect === "보"){
+          break;
+          case "보":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 이겼습니다."
-          }
+          break;
+          default:
+            break;
         }
       });
 
        //바위 클릭시
        btnRock.addEventListener('click', function(){
-        btnRock = 2;
-        if(btnRock === 2){
-          if(comSelect === "가위"){
+        switch(comSelect){
+          case "가위":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 이겼습니다."
-          }else if(comSelect === "바위"){
+          break;
+          case "바위":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 비겼습니다."
-          }else if(comSelect === "보"){
+          break;
+          case "보":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 졌습니다."
-          }
+          break;
+          default:
+            break;
         }
       });
 
        //보 클릭시
        btnPaper.addEventListener('click', function(){
-        btnPaper = 3;
-        if(btnPaper === 3){
-          if(comSelect === "가위"){
+        switch(comSelect){
+          case "가위":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 졌습니다."
-          }else if(comSelect === "바위"){
+          break;
+          case "바위":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 이겼습니다."
-          }else if(comSelect === "보"){
+          break;
+          case "보":
             resultArea.innerHTML = "컴퓨터 : "+comSelect+ "<br>" + "결과 : 비겼습니다."
-          }
+          break;
+          default:
+            break;
         }
       });
     </script>

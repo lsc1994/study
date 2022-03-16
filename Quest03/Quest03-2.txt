@@ -35,23 +35,22 @@
 		<script>
 
 		let row1Squares = document.querySelectorAll(".row1 .square");
-		for(let node of row1Squares) {
-			node.addEventListener("click", function(){
-				node.style.backgroundColor = 'yellow';
-			});
-		}
+			for(let node of row1Squares) {
+        	  	   node.addEventListener("click", function(){
+				if(node.style.backgroundColor === "yellow"){
+					node.style.backgroundColor = 'white';
+				}else{
+					node.style.backgroundColor = "yellow"
+				}
+            });
+         }
+
 
 		let row2Squares = document.querySelectorAll('.row2 .square');
          for(let node of row2Squares) {
-                node.addEventListener("click", function(){
-                   //node.classList.toggle("enabled");
-
-                   if(node.style.backgroundColor === "limegreen") {
-                        node.classList.remove("enabled");
-                    } else {
-                        node.classList.add("enabled");
-                    }
-                });
+          node.addEventListener("click", function(){
+            node.classList.toggle("enabled");
+		  });
          }
 		</script>
 	</body>

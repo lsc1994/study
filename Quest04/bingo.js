@@ -10,7 +10,6 @@ class makeBingo{
                 makeBoard += "<br>";
             }
             makeBoard += "<input type='text' class='num'>"; // output에 원하는 요소를 담는다.
-            
         }
         makeBoard += "<br>";
         makeBoard += "<button id='start'>게임시작</button>";
@@ -52,48 +51,6 @@ class makeBingo{
             });//checkNum
         });//start
     }// makes()
-    // comBingo(){
-    //     let outputt = "";
-    //     let start = document.getElementById("start");
-    //     start.addEventListener('click',function(){
-    //             outputt += "<input type='text' class='num'>"; // output에 원하는 요소를 담는다.
-    //             document.body.innerHTML = outputt;
-            
-    //     });
-    // }
-        
-        //console.log(asdf);
-        //console.log(numVal);
-                // let input = document.createElement("input");
-                // input.setAttribute("class", "numVal");
-                // let delNum = document.createElement("button");
-                // delNum.setAttribute("id","delNum");
-        // let numVal = document.getElementsByClassName("checkNuma");
-        // let asdf = document.getElementsByClassName("asdf");
-        // console.log(numVal.value);
-        // console.log(asdf);
-           
-        // document.body.innerHTML = output; 
-        // let numVal = document.getElementsByClassName("numVal");
-        // let checkNuma = document.getElementById("checkNuma");
-        // console.log(checkNuma);
-        // checkNuma.addEventListener('click',function(){
-        //     console.log(numVal.value);
-        // });
-        //checkNuma.addEventListener('click',function(){
-           // var element = document.getElementById(id); // 객체를 바로 받아서 하려했으나 잘되지 않아 아이디로 받아 가져왔다.
-         //  console.log(ArrNum);
-            // ArrNum[id] = 0; // 2차원 배열로 비교할 것이므로 굳이 0으로 바꿀 필요가 없다.
-           // ArrNum2[parseInt(id/5)][id%5] = 0; // 2차원 배열에서 고른 값을 0으로 바꾸어줌 자바스크립트는 int변환해주어야함.
-           // element.style.color = "white"; // 검정으로 바꾸고
-            //element.innerHTML = "　"; // 숫자를 사라지게함
-            //called += ArrNum[id]+'; ';
-           // document.getElementById('called').innerHTML = called;
-           // checkBingo(); // 클릭시 마다 빙고갯수를 체크하는 함수를 호출
-       // });
-       makeCom(){
-
-       }
 }//class makeBingo()
 
 

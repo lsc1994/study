@@ -1,0 +1,19 @@
+input{
+    width: 50px;
+    height: 50px;
+}
+
+#numVal{
+    width: 150px;
+    height: 20px;
+}
+div{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 5px;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    line-height: 42px; 
+}
